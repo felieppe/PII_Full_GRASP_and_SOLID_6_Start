@@ -17,11 +17,7 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public bool Cooked 
-        {
-            get { return Cooked; }
-            private set { Cooked = value; }
-        }
+        public bool Cooked {get; private set;}
 
         public Recipe() { this.Cooked = false; }
 
