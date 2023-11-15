@@ -41,6 +41,17 @@ namespace Full_GRASP_And_SOLID
         {
             this.steps.Remove(step);
         }
+        
+        private class RecipeAdapter : TimerClient {
+            Recipe Recipe;
+
+            public RecipeAdapter (Recipe recipe) {
+                this.Recipe = recipe;
+            }
+            public void TimeOut() {
+                this.Recipe.Cooked = true;
+            }
+        }
 
         // Agregado por SRP
         public string GetTextToPrint()
