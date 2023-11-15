@@ -23,6 +23,8 @@ namespace Full_GRASP_And_SOLID
             private set { Cooked = value; }
         }
 
+        public Recipe() { this.Cooked = false; }
+
         // Agregado por Creator
         public void AddStep(Product input, double quantity, Equipment equipment, int time)
         {
