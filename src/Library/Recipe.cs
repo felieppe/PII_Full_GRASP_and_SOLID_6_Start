@@ -53,6 +53,16 @@ namespace Full_GRASP_And_SOLID
             }
         }
 
+        public void Cook() {
+            int time = this.GetCookTime() * 1000;
+
+            CountdownTimer timer = new CountdownTimer();
+            RecipeAdapter adapter = new RecipeAdapter(this);
+            timer.Register(time, adapter);
+
+            Cooked = true;
+        }
+
         // Agregado por SRP
         public string GetTextToPrint()
         {
