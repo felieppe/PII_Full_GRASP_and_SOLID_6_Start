@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Full_GRASP_And_SOLID
 {
@@ -19,7 +20,7 @@ namespace Full_GRASP_And_SOLID
         public bool Cooked 
         {
             get { return Cooked; }
-            set { }
+            private set { Cooked = value; }
         }
 
         // Agregado por Creator
